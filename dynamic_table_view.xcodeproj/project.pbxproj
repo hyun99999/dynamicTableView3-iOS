@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		F2971A7B24FE815700955157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2971A7924FE815700955157 /* LaunchScreen.storyboard */; };
 		F2971A8524FE82FC00955157 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2971A8424FE82FC00955157 /* MyTableViewCell.xib */; };
 		F2971A8724FE86ED00955157 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2971A8624FE86ED00955157 /* MyTableViewCell.swift */; };
+		F8B5041225DD3CF6003FDE98 /* MyHeartBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B5041125DD3CF6003FDE98 /* MyHeartBtn.swift */; };
 		FF9BCA14100ED1491AE88C69 /* Pods_dynamic_table_view.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3141A7A8F335EE76532DB69F /* Pods_dynamic_table_view.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		F2971A7C24FE815700955157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2971A8424FE82FC00955157 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		F2971A8624FE86ED00955157 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		F8B5041125DD3CF6003FDE98 /* MyHeartBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeartBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				427EADDD231AD54207018F20 /* Pods-dynamic_table_view.debug.xcconfig */,
 				9223269EB55B5C2558B50A91 /* Pods-dynamic_table_view.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +95,7 @@
 				F2971A7724FE815700955157 /* Assets.xcassets */,
 				F2971A7924FE815700955157 /* LaunchScreen.storyboard */,
 				F2971A7C24FE815700955157 /* Info.plist */,
+				F8B5041125DD3CF6003FDE98 /* MyHeartBtn.swift */,
 			);
 			path = dynamic_table_view;
 			sourceTree = "<group>";
@@ -214,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B5041225DD3CF6003FDE98 /* MyHeartBtn.swift in Sources */,
 				F2971A7324FE815500955157 /* ViewController.swift in Sources */,
 				F2971A8724FE86ED00955157 /* MyTableViewCell.swift in Sources */,
 				F2971A6F24FE815500955157 /* AppDelegate.swift in Sources */,

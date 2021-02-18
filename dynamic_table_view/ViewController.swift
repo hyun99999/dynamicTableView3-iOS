@@ -149,7 +149,6 @@ extension ViewController: SwipeTableViewCellDelegate {
             heartAction.image = UIImage(systemName: dataItem.isFavorite ? "heart" : "heart.fill")
             heartAction.backgroundColor = dataItem.isFavorite ? .systemGray2 : #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
             
-            
             // 바텀 액션 클로러
             let closure: (UIAlertAction) -> Void = { (action: UIAlertAction) in
                 // 쎌 액션 닫기

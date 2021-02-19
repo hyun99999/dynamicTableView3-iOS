@@ -17,12 +17,17 @@ class MyTableViewCell: SwipeTableViewCell {
     
     @IBOutlet weak var contentLabel: UILabel!
     
-    // 하트 버튼
-    @IBOutlet var heartBtn: UIButton!
+    // 하트 버튼(커스텀 버튼) 스토리보드에서도 수정해주어야 함.
+    @IBOutlet var heartBtn: MyHeartBtn!
     
     // 따봉 버튼
     @IBOutlet var thumbsUpBtn: UIButton!
     
+    @IBOutlet var shareBtn: UIButton!
+    @IBOutlet var btns:[UIButton]!
+    
+    // 클로저 생성
+    var heartBtnAction : ((Bool) -> Void)?
     
     // 피드 데이터
     var feedData: Feed? {
@@ -31,7 +36,6 @@ class MyTableViewCell: SwipeTableViewCell {
             
             if let data = feedData {
                 // 피드 데이터에 따라 쎌의 UI 변경
-                heartBtn.tintColor = data.isFavorite ? #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1) : .systemGray
                 thumbsUpBtn.tintColor = data.isThumbsUp ? #colorLiteral(red: 0.1887893739, green: 0.3306484833, blue: 1, alpha: 1) : .systemGray
                 contentLabel.text = data.content
             }
@@ -43,8 +47,7 @@ class MyTableViewCell: SwipeTableViewCell {
         super.awakeFromNib()
         
         userProfileImg.layer.cornerRadius = userProfileImg.frame.height / 2
-        
-        
     }
     
+    // update
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,30 +46,43 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is a long established fact that a reader will be distracted by the rea" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glG-FY-z6z">
-                        <rect key="frame" x="10" y="68" width="360.5" height="68"/>
+                        <rect key="frame" x="10" y="68" width="360.5" height="48"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="arK-kI-Y0c">
-                        <rect key="frame" x="10" y="144" width="80" height="20"/>
+                        <rect key="frame" x="10" y="124" width="140" height="40"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8p-dv-X2M" userLabel="heartBtn">
-                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8p-dv-X2M" userLabel="heartBtn" customClass="MyHeartBtn" customModule="dynamic_table_view" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="aCn-4G-MkY"/>
-                                    <constraint firstAttribute="width" constant="20" id="uhJ-jw-aNs"/>
+                                    <constraint firstAttribute="height" constant="40" id="aCn-4G-MkY"/>
+                                    <constraint firstAttribute="width" constant="40" id="uhJ-jw-aNs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" image="heart.fill" catalog="system"/>
+                                <color key="tintColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="heart.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrK-xe-TUP" userLabel="likeBtn">
-                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
-                                <state key="normal" image="hand.thumbsup.fill" catalog="system"/>
+                                <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                <state key="normal" image="hand.thumbsup.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLg-4r-mig" userLabel="shareBtn">
-                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
-                                <state key="normal" title="Button" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                                <rect key="frame" x="100" y="0.0" width="40" height="40"/>
+                                <state key="normal" title="Button" image="arrowshape.turn.up.right.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                             </button>
                         </subviews>
                         <color key="tintColor" systemColor="systemGrayColor"/>
@@ -91,8 +104,12 @@
             <connections>
                 <outlet property="contentLabel" destination="glG-FY-z6z" id="iHU-3X-nEm"/>
                 <outlet property="heartBtn" destination="X8p-dv-X2M" id="4IM-26-w6e"/>
+                <outlet property="shareBtn" destination="WLg-4r-mig" id="Iow-cq-S91"/>
                 <outlet property="thumbsUpBtn" destination="NrK-xe-TUP" id="aAB-MM-sQn"/>
                 <outlet property="userProfileImg" destination="fgK-Uo-c21" id="8br-be-kI8"/>
+                <outletCollection property="btns" destination="X8p-dv-X2M" collectionClass="NSMutableArray" id="fUg-Uj-Od8"/>
+                <outletCollection property="btns" destination="NrK-xe-TUP" collectionClass="NSMutableArray" id="ML3-VY-oBa"/>
+                <outletCollection property="btns" destination="WLg-4r-mig" collectionClass="NSMutableArray" id="igS-Rz-TKT"/>
             </connections>
             <point key="canvasLocation" x="-63.768115942028992" y="142.63392857142856"/>
         </tableViewCell>

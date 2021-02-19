@@ -26,7 +26,7 @@ class MyHeartBtn: UIButton {
         // 2. 변경된 상태에 따른 이미지 변경
         let activatedImage = UIImage(systemName: "heart.fill")?.withTintColor(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)).withRenderingMode(.alwaysOriginal)
         
-        let normalImage = UIImage(systemName: "heart")?.withTintColor(.systemGray2).withRenderingMode(.alwaysOriginal)
+        let normalImage = UIImage(systemName: "heart")?.withTintColor(#colorLiteral(red: 0.8039215686, green: 0.8039215686, blue: 0.8039215686, alpha: 1)).withRenderingMode(.alwaysOriginal)
         self.setImage(self.isActivated ? activatedImage : normalImage, for: .normal)
     }
 }

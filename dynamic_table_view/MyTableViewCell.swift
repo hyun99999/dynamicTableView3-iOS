@@ -29,25 +29,33 @@ class MyTableViewCell: SwipeTableViewCell {
     // 클로저 생성
     var heartBtnAction : ((Bool) -> Void)?
     
-    // 피드 데이터
-    var feedData: Feed? {
-        didSet{
-            print("MyTableViewCell - didSet / feedData: \(feedData)")
-            
-            if let data = feedData {
-                // 피드 데이터에 따라 쎌의 UI 변경
-                thumbsUpBtn.tintColor = data.isThumbsUp ? #colorLiteral(red: 0.1887893739, green: 0.3306484833, blue: 1, alpha: 1) : .systemGray
-                contentLabel.text = data.content
-            }
-        }
-    }
-    
     override func awakeFromNib() {
         print("MyTableViewCell - awakeFromNib() called")
         super.awakeFromNib()
         
         userProfileImg.layer.cornerRadius = userProfileImg.frame.height / 2
+        btns.forEach{$0.addTarget(self, action: #selector(onBtnClicked(_:)), for: .touchUpInside)}
     }
     
     // update
+    func updateUI(with data: Feed) {
+        print("MyTableViewCell - updateUI() called")
+        
+        heartBtn.setState(data.isFavorite)
+        thumbsUpBtn.tintColor = data.isThumbsUp ? #colorLiteral(red: 0.1887893739, green: 0.3306484833, blue: 1, alpha: 1) : .systemGray
+        contentLabel.text = data.content
+    }
+    
+    @objc fileprivate func onBtnClicked(_ sender: UIButton){
+        switch sender {
+        case heartBtn:
+            print("하트버튼이 클릭되었다.")
+        case thumbsUpBtn:
+            print("좋아요버튼이 클릭되었다.")
+        case shareBtn:
+            print("공유하기버튼이 클릭되었다.")
+        default:
+            break
+        }
+    }
 }

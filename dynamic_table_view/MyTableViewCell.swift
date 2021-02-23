@@ -50,6 +50,8 @@ class MyTableViewCell: SwipeTableViewCell {
         switch sender {
         case heartBtn:
             print("하트버튼이 클릭되었다.")
+            // 클로저 호출
+            heartBtnAction?(heartBtn.isActivated)
         case thumbsUpBtn:
             print("좋아요버튼이 클릭되었다.")
         case shareBtn:

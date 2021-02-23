@@ -87,6 +87,12 @@ extension ViewController: UITableViewDataSource {
             let cellData = contentArray[indexPath.row]
             cell.updateUI(with: cellData)
         }
+        cell.heartBtnAction = { [weak self] currentBtnState in
+            guard let self = self else {return}
+            self.contentArray[indexPath.row].isFavorite = !currentBtnState
+            //해당 테이블 뷰 셀만 리로드
+            self.myTableView.reloadRows(at: [indexPath], with: .automatic)
+        }
 
         return cell
     }
